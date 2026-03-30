@@ -11,7 +11,7 @@ from queue import Queue
 # CONFIG
 # =========================
 KNOWN_DIR = "known"
-UNLOCK_URL = "http://10.98.104.222/action?go=on"
+UNLOCK_URL = "http://10.98.104.222/action?go=true"
 THRESHOLD = 0.45
 
 os.makedirs(KNOWN_DIR, exist_ok=True)
@@ -195,7 +195,7 @@ while True:
     # =========================
     # PRESS 'i' TO REGISTER FACE
     # =========================
-    if key == ord('i'):
+    if key == ord('s') or key == ord('c'):
         if len(face_locations) > 0:
             save_new_face(frame, (top, right, bottom, left))
         else:
